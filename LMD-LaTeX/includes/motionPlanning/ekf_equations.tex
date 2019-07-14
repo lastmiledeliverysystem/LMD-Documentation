@@ -1,0 +1,15 @@
+\textbf{Discrete-time predict and update equations:}\\
+Notation  ${\displaystyle {\hat {\mathbf {x} }}_{n\mid m}} $represents the estimate of ${\displaystyle \mathbf {x} }$ at time $n$ given observations up to and including at time $m \leq n$. \\
+\textbf{Predict}\\
+Predicted state estimate:  	 ${\displaystyle {\hat {\boldsymbol {x}}}_{k|k-1}=f({\hat {\boldsymbol {x}}}_{k-1|k-1},{\boldsymbol {u}}_{k})}$ \\
+Predicted covariance estimate: ${\displaystyle {\boldsymbol {P}}_{k|k-1}={{\boldsymbol {F}}_{k}}{\boldsymbol {P}}_{k-1|k-1}{{\boldsymbol {F}}_{k}^{\top }}+{\boldsymbol {Q}}_{k}}$ \\
+\textbf{Update}\\
+Innovation or measurement residual: ${\displaystyle {\tilde {\boldsymbol {y}}}_{k}={\boldsymbol {z}}_{k}-h({\hat {\boldsymbol {x}}}_{k|k-1})}$ \\
+Innovation (or residual) covariance: ${\displaystyle {\boldsymbol {S}}_{k}={{\boldsymbol {H}}_{k}}{\boldsymbol {P}}_{k|k-1}{{\boldsymbol {H}}_{k}^{\top }}+{\boldsymbol {R}}_{k}} $ \\
+Near-optimal Kalman gain: $ {\displaystyle {\boldsymbol {K}}_{k}={\boldsymbol {P}}_{k|k-1}{{\boldsymbol {H}}_{k}^{\top }}{\boldsymbol {S}}_{k}^{-1}}$ \\ 
+Updated state estimate: ${\displaystyle {\hat {\boldsymbol {x}}}_{k|k}={\hat {\boldsymbol {x}}}_{k|k-1}+{\boldsymbol {K}}_{k}{\tilde {\boldsymbol {y}}}_{k}} $ \\
+Updated covariance estimate: $ {\displaystyle {\boldsymbol {P}}_{k|k}=({\boldsymbol {I}}-{\boldsymbol {K}}_{k}{{\boldsymbol {H}}_{k}}){\boldsymbol {P}}_{k|k-1}} $\\
+where the state transition and observation matrices are defined to be the following Jacobians: \\
+  
+  $ {\displaystyle {{\boldsymbol {F}}_{k}}=\left.{\frac {\partial f}{\partial {\boldsymbol {x}}}}\right\vert _{{\hat {\boldsymbol {x}}}_{k-1|k-1},{\boldsymbol {u}}_{k}}}$ \\ 
+ ${\displaystyle {{\boldsymbol {H}}_{k}}=\left.{\frac {\partial h}{\partial {\boldsymbol {x}}}}\right\vert _{{\hat {\boldsymbol {x}}}_{k|k-1}}}$ 

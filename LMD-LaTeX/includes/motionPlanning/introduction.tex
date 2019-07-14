@@ -1,0 +1,26 @@
+\newline
+\newline
+\vspace{3mm}
+\hfill
+
+\section{Introduction}
+
+\hspace{2cm} In this chapter we will discuss motion planning and navigation to determine the path that will be taken by the robot.
+In robotics, motion planning was originally concerned with problems such as how to move a piano from one room to another in a house without
+hitting anything. The field has grown, however, to include complications such as
+uncertainties, multiple bodies, and dynamics. In artificial intelligence, planning
+originally meant a search for a sequence of logical operators or actions that transform an initial world state into a desired goal state. Presently, planning extends
+beyond this to include many decision-theoretic ideas such as Markov decision processes, imperfect state information, and game-theoretic equilibria. Although control theory has traditionally been concerned with issues such as stability, feedback,
+and optimality, there has been a growing interest in designing algorithms that find
+feasible open-loop trajectories for nonlinear systems.\cite{web039}
+\par
+For an autonomous mobile robot working in a real environment, there are three levels of motion planning required to perform its task, long term planning, short term planning and immediate term planning. In our project we will deal with short and long term planning.
+
+\par
+Long term planning is a map based planning that is responsible for generating a path from starting location to desired location, In our project we used A star algorithm.
+\par
+Short term planning used to determine how to follow the path decided by the higher planner. Using robot perception, it is supposed to decide when to turn or change lanes according to surrounding dynamic object states.
+
+\par
+While the robot is moving and taking it's path from source to destination, it's important to know the robot pose at each sample time, that will be achieved by using state estimation as a feedback which will be discussed soon in this chapter.
+
