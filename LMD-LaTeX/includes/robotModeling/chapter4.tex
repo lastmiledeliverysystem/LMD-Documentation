@@ -39,7 +39,7 @@ w(R + \frac{L}{2}) & = v_r  &  w(R - \frac{L}{2}) & = v_l
  Where $L$  is the distance between any two facing wheels,$v$ is the linear velocity and $w$ is the angular velocity.
 From these two equations and the formula: $v = w * R$ , the linear and angular velocities are calculated using the following equations:
 \begin{align*}
-v & = \frac{v_r + v_l}{2} & w & = \frac{v_r - v_l}{2}
+v & = \frac{v_r + v_l}{2} & w & = \frac{v_r - v_l}{L}
 \end{align*}
 \subsection{Robot Inverse kinematics}
 \hspace{2cm}Practically, to follow a specified trajectory given a new goal to be achieved described by ($x$,$y$,\(\theta)\) and the suitable values for $v$ and $w$, the required will be right and left velocities which are calculated using inverse kinematics according to the following equations:
